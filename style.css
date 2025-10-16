@@ -1,0 +1,331 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html { font-size: 62.5%; scroll-behavior: smooth; }
+
+body {
+  background: linear-gradient(105deg,
+    hsl(2deg 100% 94%) 0%,
+    hsl(351deg 65% 91%) 2%,
+    hsl(339deg 48% 88%) 5%,
+    hsl(329deg 38% 84%) 7%,
+    hsl(318deg 32% 81%) 10%,
+    hsl(307deg 27% 78%) 13%,
+    hsl(297deg 25% 75%) 17%,
+    hsl(289deg 27% 73%) 21%,
+    hsl(283deg 29% 70%) 25%,
+    hsl(278deg 30% 68%) 29%,
+    hsl(274deg 31% 66%) 35%,
+    hsl(271deg 32% 64%) 40%,
+    hsl(268deg 32% 62%) 47%,
+    hsl(268deg 33% 61%) 54%,
+    hsl(268deg 33% 60%) 62%,
+    hsl(268deg 34% 59%) 69%,
+    hsl(268deg 34% 58%) 76%,
+    hsl(268deg 35% 57%) 82%,
+    hsl(268deg 35% 57%) 86%,
+    hsl(268deg 35% 56%) 90%,
+    hsl(268deg 36% 55%) 93%,
+    hsl(268deg 36% 54%) 95%,
+    hsl(268deg 36% 53%) 97%,
+    hsl(267deg 37% 52%) 99%,
+    hsl(267deg 37% 51%) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #7F55B1;
+  overflow-x: hidden;
+}
+
+section {
+  height: calc(100vh - 8rem); 
+  padding-top: 8rem; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(9px) saturate(200%);
+  -webkit-backdrop-filter: blur(9px) saturate(200%);
+  background-color: #3e1e68c6;
+  z-index: 1000;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 3rem;
+  color: #F49BAB;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.logo:hover { transform: scale(1.1); }
+
+nav {
+  display: flex;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #9B7EBD;
+  margin-left: 4rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+nav a:hover,
+nav a.active {
+  color: #F49BAB;
+  border-bottom: 3px solid #F49BAB;
+}
+
+nav a img {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+nav a:hover img { transform: scale(1.1); }
+
+.menu-icon {
+  display: none;
+  font-size: 3rem;
+  color: #F49BAB;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  flex-wrap: wrap;
+  text-align: center;
+  height: calc(100vh - 8rem); 
+  padding-top: 8rem; 
+  overflow: hidden;
+  margin-top: 0; 
+}
+
+.home-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.home-content p {
+  font-size: 1.8rem;
+  color: #FFE1E0  ;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.home-img img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px #FFE1E0;
+  cursor: pointer;
+  transition: 0.3s ease;
+  animation: float 3s ease-in-out infinite, glow 2.5s ease-in-out infinite;
+}
+.home-img img:hover { transform: scale(1.05); }
+
+.home-content img {
+  width: 3rem; 
+  height: auto;
+  vertical-align: middle; 
+  margin-left: 0.5rem; 
+  transition: transform 0.3s ease;
+}
+
+.home-content img:hover {
+  transform: scale(1.1); 
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px); 
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px #FFE1E0;
+  }
+  50% {
+    box-shadow: 0 0 35px #F49BAB;
+  }
+  100% {
+    box-shadow: 0 0 20px #FFE1E0;
+  }
+}
+
+.home-box {
+  background-color: rgba(255, 255, 255, 0.1); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.home-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.static-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #7F55B1;
+}
+
+.typing-text {
+  font-size: 5rem !important; 
+  font-weight: 600;
+  color: #F49BAB;
+  display: inline-block;
+  line-height: 1.2;
+}
+
+section h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #9B7EBD;
+}
+section p, section li {
+  font-size: 1.8rem;
+  color: #fff;
+  line-height: 1.6;
+}
+
+@media (max-width: 995px) {
+  html { font-size: 55%; }
+
+  header { padding: 1.5rem 5%; }
+
+  .menu-icon { display: block; }
+
+nav {
+  position: absolute;
+  top: 100%; 
+  left: 5%;
+  flex-direction: column;
+  background: #5539788c; 
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 90%;
+  margin: 1rem auto; 
+  text-align: center;
+  padding: 2rem 0;
+  z-index: 9999;
+  transform: translateY(-30px); 
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+nav.active {
+  transform: translateY(0); 
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+nav a {
+  color: #fff;
+  margin: 1rem 0;
+  font-size: 2rem;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #F49BAB;
+}
+
+
+  .home {
+    flex-direction: column;
+    gap: 4rem;
+  }
+ 
+  .home-img img { width: 60vw; }
+
+  .home-box {
+  flex-direction: column;
+  padding: 3rem 2rem;
+  gap: 3rem;
+}
+
+.typing-text {
+  font-size: 4rem !important;
+  display: block;
+}
+
+.static-text {
+  font-size: 2.5rem;
+}
+
+}
+
+
+@media (max-width: 500px) {
+  html { font-size: 50%; }
+  .home-content p { font-size: 1.6rem; }
+  section h2 { font-size: 3rem; }
+
+.typing-text {
+  font-size: 3.5rem !important;
+  display: block;
+}
+
+.static-text {
+  font-size: 2rem;
+}
+
+}
+
+
+
